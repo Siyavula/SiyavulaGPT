@@ -1,3 +1,35 @@
+
+# SiyuVulaGPT
+
+SiyavulaGPT is a tool for storing and querying educational material in natural language,
+via a chat interface, like ChatGPT. The code in `src/` is a fork of the ChatGPT Retrieval 
+Plugin, the original README is below.
+
+The `docker/` directory contains a Docker Compose configuration for running both the main API and a Weaviate instance - a vector database for storing lanuage model embeddings - locally. 
+In order to run the API locally, you will need to create a local Docker Compose configuration at `docker/docker-compose.override.yaml`:
+
+```yaml
+---
+version: '3.4'
+
+services:
+    backend-retrieval:
+        environment:
+            ENV: 'scratch'
+            OPENAI_API_KEY: 'sk-<your_openai_api_key>'
+        ports:
+            - '8010:8000'
+```
+
+You can then run the API with:
+
+```bash
+cd docker && docker-compose up
+```
+
+Descriptions of the available endpoints may be found below.
+
+---
 # ChatGPT Retrieval Plugin
 
 > **Join the [ChatGPT plugins waitlist here](https://openai.com/waitlist/plugins)!**
