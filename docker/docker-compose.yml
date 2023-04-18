@@ -38,7 +38,6 @@ services:
             - retrieval
         environment:
             DATASTORE: "weaviate"
-            OPENAI_API_KEY: "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"
             WEAVIATE_HOST: "http://weviate.scratch.co"
             WEAVIATE_PORT: "8080"
             WEAVIATE_INDEX: "OpenAIDocument"
