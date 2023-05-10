@@ -196,8 +196,8 @@ def html_to_latex_prompt(html):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Script to upsert documents from folder to the retrieval plugin.")
-    parser.add_argument("filepath", type=str, help="Path to folder containing documents.")
-    parser.add_argument("url", type=str, help="URL of the retrieval plugin.")
+    parser = argparse.ArgumentParser(description="Script to upsert documents from folder to the vector DB via the retrieval plugin.")
+    parser.add_argument("filepath", type=str, help="Path to folder containing HTML documents.")
+    parser.add_argument("url", type=str, help="URL of the retrieval plugin API.")
     args = parser.parse_args()
     main(args.filepath, args.url)

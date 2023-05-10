@@ -146,9 +146,9 @@ def num_tokens(
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Run the Siyavula GPT plugin.")
-    parser.add_argument("query", type=str, help="Query to run the plugin on.")
-    parser.add_argument("url", type=str, help="URL of the doc DB")
+    parser = argparse.ArgumentParser(description="Run the Siyavula GPT query-answer mockup.")
+    parser.add_argument("query", type=str, help="Query to submit to ChatGPT.")
+    parser.add_argument("url", type=str, help="URL of the retrieval plugin API.")
     args = parser.parse_args()
     print(main(args.query, args.url))
     # print(json.dumps(json.loads(), indent=4))
