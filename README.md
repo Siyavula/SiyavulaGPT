@@ -1,5 +1,5 @@
 
-# SiyuVulaGPT
+# SiyavulaGPT
 
 SiyavulaGPT is a tool for storing and querying educational material in natural language,
 via a chat interface, like ChatGPT. The code in `src/` is a fork of the ChatGPT Retrieval 
